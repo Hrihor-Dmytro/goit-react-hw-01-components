@@ -1,4 +1,5 @@
 import { PropTypes } from 'prop-types';
+
 export const Profile = ({ avatar, username, tag, location, stats }) => {
   return (
     <section>
