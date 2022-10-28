@@ -1,5 +1,5 @@
 import { ImgList, BoxList, Status } from './Friends.module';
-
+import PropTypes from 'prop-types';
 export const Friendens = ({ avatar, name, isOnline }) => {
   return (
     <BoxList>
@@ -8,4 +8,9 @@ export const Friendens = ({ avatar, name, isOnline }) => {
       <p> {name} </p>
     </BoxList>
   );
+};
+Friendens.propTypes = {
+  avatar: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  isOnline: PropTypes.bool.isRequired,
 };
