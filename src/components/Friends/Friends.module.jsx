@@ -27,12 +27,9 @@ export const Status = styled.span`
   width: 10px;
   height: 10px;
   margin-right: 10px;
-  background-color: red;
   border-radius: 50%;
   border: 1px solid black;
   background-color: ${props => {
-    if (props.type) {
-      return 'green';
-    }
+    return props.isOnline ? 'red' : 'green';
   }};
 `;
