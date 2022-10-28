@@ -1,9 +1,11 @@
+import { ImgList, BoxList, Status } from './Friends.module';
+
 export const Friendens = ({ avatar, name, isOnline }) => {
   return (
-    <div>
-      <span>{isOnline}</span>
-      <img src={avatar} alt="User avatar" />
+    <BoxList>
+      <Status type={isOnline}>{isOnline}</Status>
+      <ImgList src={avatar} alt="User avatar" />
       <p> {name} </p>
-    </div>
+    </BoxList>
   );
 };

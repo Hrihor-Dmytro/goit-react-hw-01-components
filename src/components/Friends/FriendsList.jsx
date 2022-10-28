@@ -1,19 +1,21 @@
 import PropTypes from 'prop-types';
 import { Friendens } from './Friends';
+import { FriendsList, FriendsCard } from './Friends.module';
+
 export const FriendList = ({ friends }) => {
   return (
     <section>
-      <ul>
+      <FriendsList>
         {friends.map(friends => (
-          <li key={friends.id}>
+          <FriendsCard key={friends.id}>
             <Friendens
               avatar={friends.avatar}
               name={friends.name}
               isOnline={friends.isOnline}
             />
-          </li>
+          </FriendsCard>
         ))}
-      </ul>
+      </FriendsList>
     </section>
   );
 };
